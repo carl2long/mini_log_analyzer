@@ -54,7 +54,18 @@ def drill3():
     print("Largest:", max(numbers))
 
 def drill4():
-    pass
+    counts = {"INFO": 0, "WARNING": 0, "ERROR": 0,}
+    for i in range(5):
+        status = input("Enter a status (INFO/WARNING/ERROR): ").strip().upper()
+
+        if status in counts:
+            counts[status] += 1
+
+        else:
+            print(Red + "Invalid status" + Reset)
+
+    print(counts)
+
 def drill5():
     pass
 def main():
